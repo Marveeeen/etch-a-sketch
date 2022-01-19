@@ -19,6 +19,18 @@ choseGridSize.addEventListener('click', (e) => {
     clearGrid();
 })
 
+randomColorsBtn.addEventListener('click', (e) => {
+    clearGrid();
+    shade = false;
+    randomColors ? randomColors = false : randomColors = true;
+})
+
+shadeBtn.addEventListener('click', (e) => {
+    clearGrid();
+    randomColors = false;
+    shade ? shade = false : shade = true;
+})
+
 // Make Grid with Dynamic size
 
 let randomColors = false;
@@ -64,4 +76,17 @@ function clearGrid() {
         cells.style.opacity = "1.1";
     })
 
+}
+
+function choseShade(e) {
+    // Set Color to black
+    e.target.style.backgroundColor = "black";
+
+    let currOpacity = e.target.style.opacity;
+    if (currOpacity > 1) {
+        e.target.style.opacity = 0.2;
+        return null
+    } else if (currOpacity < 1) {
+        e.target.style.opacity = (parseFloat(currOpacity) + 0.2)
+    }
 }
