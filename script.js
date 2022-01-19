@@ -9,6 +9,16 @@ clearGridBtn.addEventListener('click', (e) => {
     clearGrid()
 });
 
+choseGridSize.addEventListener('click', (e) => {
+    let size = prompt("Select a grid size. Must be no greater than 100", "16")
+    if (size > 100) {
+        return null;
+    }
+
+    createGrid(size,size);
+    clearGrid();
+})
+
 // Make Grid with Dynamic size
 
 let randomColors = false;
