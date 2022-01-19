@@ -7,5 +7,5 @@ Use and practice a git branch. Practice and apply DOM manipulation
 # SKILLS USE
 HTML, CSS, JAVASCRIPT
 
-# AUTOR
+# AUTHOR
 Marveeen - jmvroqueee@github.com
